@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail Ulasan</title>
+</head>
+<body>
+<h1>Detail Ulasan</h1>
+<div th:if="${ulasan != null}">
+    <p>Produk ID: <span th:text="${ulasan.idProduk}"></span></p>
+    <p>Pengguna ID: <span th:text="${ulasan.idPengguna}"></span></p>
+    <p>Komentar: <span th:text="${ulasan.komentar}"></span></p>
+    <p>Rating: <span th:text="${ulasan.rating}"></span></p>
+</div>
+<form th:action="@{/ulasan/perbarui/{id}(id=${ulasan.id})}" method="post">
+    <input type="hidden" name="idProduk" th:value="${ulasan.idProduk}" />
+    <input type="hidden" name="idPengguna" th:value="${ulasan.idPengguna}" />
+    <textarea name="komentar" th:text="${ulasan.komentar}"></textarea>
+    <input type="number" name="rating" th:value="${ulasan.rating}" min="1" max="5" />
+    <button type="submit">Perbarui Ulasan</button>
+</form>
+<form th:action="@{/ulasan/hapus/{id}(id=${ulasan.id})}" method="post">
+    <button type="submit">Hapus Ulasan</button>
+</form>
+<a th:href="@{/ulasan}">Kembali</a>
+</body>
+</html>
