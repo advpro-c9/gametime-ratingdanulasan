@@ -8,20 +8,20 @@ import java.util.*;
 public class UlasanRepository {
     private List<Ulasan> ulasanData = new ArrayList<>();
 
-    public Ulasan simpan(Ulasan ulasan) {
+    public Ulasan save(Ulasan ulasan) {
         ulasanData.add(ulasan);
         return ulasan;
     }
 
-    public Iterator<Ulasan> temukanSemua() {
+    public Iterator<Ulasan> findAll() {
         return ulasanData.iterator();
     }
 
-    public Optional<Ulasan> temukanById(Long id) {
+    public Optional<Ulasan> findById(Long id) {
         return ulasanData.stream().filter(ulasan -> ulasan.getId().equals(id)).findFirst();
     }
 
-    public Ulasan perbarui(Long id, Ulasan ulasanYangDiperbarui) {
+    public Ulasan update(Long id, Ulasan ulasanYangDiperbarui) {
         for (int i = 0; i < ulasanData.size(); i++) {
             Ulasan ulasan = ulasanData.get(i);
             if (ulasan.getId().equals(id)) {

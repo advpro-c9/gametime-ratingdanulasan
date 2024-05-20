@@ -15,23 +15,23 @@ public class UlasanService {
         this.ulasanRepository = ulasanRepository;
     }
 
-    public Ulasan simpanUlasan(Ulasan ulasan) {
-        return ulasanRepository.simpan(ulasan);
+    public Ulasan saveUlasan(Ulasan ulasan) {
+        return ulasanRepository.save(ulasan);
     }
 
-    public Iterator<Ulasan> temukanSemuaUlasan() {
-        return ulasanRepository.temukanSemua();
+    public Iterator<Ulasan> findAllUlasan() {
+        return ulasanRepository.findAll();
     }
 
-    public Optional<Ulasan> temukanUlasanById(Long id) {
-        return ulasanRepository.temukanById(id);
+    public Optional<Ulasan> findUlasanById(Long id) {
+        return ulasanRepository.findById(id);
     }
 
-    public Ulasan perbaruiUlasan(Long id, Ulasan ulasanYangDiperbarui) {
-        return ulasanRepository.perbarui(id, ulasanYangDiperbarui);
+    public Ulasan updateUlasan(Long id, Ulasan ulasanYangDiperbarui) {
+        return ulasanRepository.update(id, ulasanYangDiperbarui);
     }
 
-    public void hapusUlasan(Long id) {
+    public void deleteUlasan(Long id) {
         ulasanRepository.hapus(id);
     }
 }

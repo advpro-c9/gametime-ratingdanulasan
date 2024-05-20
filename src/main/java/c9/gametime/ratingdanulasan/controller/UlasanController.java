@@ -19,20 +19,20 @@ public class UlasanController {
     }
 
     @GetMapping
-    public String lihatSemuaUlasan(Model model) {
-        model.addAttribute("ulasan", ulasanService.temukanSemuaUlasan());
+    public String findAllUlasan(Model model) {
+        model.addAttribute("ulasan", ulasanService.findAllUlasan());
         return "ulasan";
     }
 
     @PostMapping("/tambah")
     public String tambahUlasan(@ModelAttribute Ulasan ulasan) {
-        ulasanService.simpanUlasan(ulasan);
+        ulasanService.saveUlasan(ulasan);
         return "redirect:/ulasan";
     }
 
     @GetMapping("/{id}")
-    public String lihatUlasanById(@PathVariable Long id, Model model) {
-        Optional<Ulasan> ulasan = ulasanService.temukanUlasanById(id);
+    public String findUlasanById(@PathVariable Long id, Model model) {
+        Optional<Ulasan> ulasan = ulasanService.findUlasanById(id);
         if (ulasan.isPresent()) {
             model.addAttribute("ulasan", ulasan.get());
             return "detail-ulasan";
@@ -41,14 +41,14 @@ public class UlasanController {
     }
 
     @PostMapping("/perbarui/{id}")
-    public String perbaruiUlasan(@PathVariable Long id, @ModelAttribute Ulasan ulasan) {
-        ulasanService.perbaruiUlasan(id, ulasan);
+    public String updateUlasan(@PathVariable Long id, @ModelAttribute Ulasan ulasan) {
+        ulasanService.updateUlasan(id, ulasan);
         return "redirect:/ulasan";
     }
 
     @PostMapping("/hapus/{id}")
-    public String hapusUlasan(@PathVariable Long id) {
-        ulasanService.hapusUlasan(id);
+    public String deleteUlasan(@PathVariable Long id) {
+        ulasanService.deleteUlasan(id);
         return "redirect:/ulasan";
     }
 }
