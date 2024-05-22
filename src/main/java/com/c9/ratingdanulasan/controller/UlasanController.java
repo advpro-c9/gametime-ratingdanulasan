@@ -1,6 +1,7 @@
-package c9.gametime.ratingdanulasan.controller;
-import c9.gametime.ratingdanulasan.model.Ulasan;
-import c9.gametime.ratingdanulasan.service.UlasanService;
+package com.c9.ratingdanulasan.controller;
+
+import com.c9.ratingdanulasan.model.Ulasan;
+import com.c9.ratingdanulasan.service.UlasanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,8 +25,8 @@ public class UlasanController {
         return "ulasan";
     }
 
-    @PostMapping("/tambah")
-    public String tambahUlasan(@ModelAttribute Ulasan ulasan) {
+    @PostMapping("/add")
+    public String addUlasan(@ModelAttribute Ulasan ulasan) {
         ulasanService.saveUlasan(ulasan);
         return "redirect:/ulasan";
     }
@@ -40,13 +41,13 @@ public class UlasanController {
         return "redirect:/ulasan";
     }
 
-    @PostMapping("/perbarui/{id}")
+    @PostMapping("/update/{id}")
     public String updateUlasan(@PathVariable Long id, @ModelAttribute Ulasan ulasan) {
         ulasanService.updateUlasan(id, ulasan);
         return "redirect:/ulasan";
     }
 
-    @PostMapping("/hapus/{id}")
+    @PostMapping("/delete/{id}")
     public String deleteUlasan(@PathVariable Long id) {
         ulasanService.deleteUlasan(id);
         return "redirect:/ulasan";

@@ -1,13 +1,14 @@
-package c9.gametime.ratingdanulasan.service;
-import c9.gametime.ratingdanulasan.model.Ulasan;
-import c9.gametime.ratingdanulasan.repository.UlasanRepository;
+package com.c9.ratingdanulasan.service;
+
+import com.c9.ratingdanulasan.model.Ulasan;
+import com.c9.ratingdanulasan.repository.UlasanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Iterator;
-import java.util.Optional;
+import java.util.*;
+
 
 @Service
-public class UlasanService {
+public class    UlasanService {
     private final UlasanRepository ulasanRepository;
 
     @Autowired
@@ -19,7 +20,7 @@ public class UlasanService {
         return ulasanRepository.save(ulasan);
     }
 
-    public Iterator<Ulasan> findAllUlasan() {
+    public List<Ulasan> findAllUlasan() {
         return ulasanRepository.findAll();
     }
 
@@ -32,7 +33,6 @@ public class UlasanService {
     }
 
     public void deleteUlasan(Long id) {
-        ulasanRepository.hapus(id);
+        ulasanRepository.delete(id);
     }
 }
-

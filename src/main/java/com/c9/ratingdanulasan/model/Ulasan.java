@@ -1,4 +1,4 @@
-package c9.gametime.ratingdanulasan.model;
+package com.c9.ratingdanulasan.model;
 
 import lombok.Getter;
 import lombok.Setter;

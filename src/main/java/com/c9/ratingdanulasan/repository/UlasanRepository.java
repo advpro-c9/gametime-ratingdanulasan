@@ -1,6 +1,6 @@
-package c9.gametime.ratingdanulasan.repository;
+package com.c9.ratingdanulasan.repository;
 
-import c9.gametime.ratingdanulasan.model.Ulasan;
+import com.c9.ratingdanulasan.model.Ulasan;
 import org.springframework.stereotype.Repository;
 import java.util.*;
 
@@ -13,8 +13,8 @@ public class UlasanRepository {
         return ulasan;
     }
 
-    public Iterator<Ulasan> findAll() {
-        return ulasanData.iterator();
+    public List<Ulasan> findAll() {
+        return new ArrayList<>(ulasanData);
     }
 
     public Optional<Ulasan> findById(Long id) {
@@ -35,7 +35,7 @@ public class UlasanRepository {
         return null;
     }
 
-    public void hapus(Long id) {
+    public void delete(Long id) {
         ulasanData.removeIf(ulasan -> ulasan.getId().equals(id));
     }
 }
