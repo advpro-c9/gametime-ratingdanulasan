@@ -24,8 +24,8 @@ public class UlasanController {
         return "ulasan";
     }
 
-    @PostMapping("/tambah")
-    public String tambahUlasan(@ModelAttribute Ulasan ulasan) {
+    @PostMapping("/add")
+    public String addUlasan(@ModelAttribute Ulasan ulasan) {
         ulasanService.saveUlasan(ulasan);
         return "redirect:/ulasan";
     }
@@ -40,13 +40,13 @@ public class UlasanController {
         return "redirect:/ulasan";
     }
 
-    @PostMapping("/perbarui/{id}")
+    @PostMapping("/update/{id}")
     public String updateUlasan(@PathVariable Long id, @ModelAttribute Ulasan ulasan) {
         ulasanService.updateUlasan(id, ulasan);
         return "redirect:/ulasan";
     }
 
-    @PostMapping("/hapus/{id}")
+    @PostMapping("/delete/{id}")
     public String deleteUlasan(@PathVariable Long id) {
         ulasanService.deleteUlasan(id);
         return "redirect:/ulasan";
