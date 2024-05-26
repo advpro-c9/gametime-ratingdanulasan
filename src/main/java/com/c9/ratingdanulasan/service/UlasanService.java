@@ -1,38 +1,17 @@
 package com.c9.ratingdanulasan.service;
 
 import com.c9.ratingdanulasan.model.Ulasan;
-import com.c9.ratingdanulasan.repository.UlasanRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import java.util.*;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 
-@Service
-public class    UlasanService {
-    private final UlasanRepository ulasanRepository;
-
-    @Autowired
-    public UlasanService(UlasanRepository ulasanRepository) {
-        this.ulasanRepository = ulasanRepository;
-    }
-
-    public Ulasan saveUlasan(Ulasan ulasan) {
-        return ulasanRepository.save(ulasan);
-    }
-
-    public List<Ulasan> findAllUlasan() {
-        return ulasanRepository.findAll();
-    }
-
-    public Optional<Ulasan> findUlasanById(Long id) {
-        return ulasanRepository.findById(id);
-    }
-
-    public Ulasan updateUlasan(Long id, Ulasan ulasanYangDiperbarui) {
-        return ulasanRepository.update(id, ulasanYangDiperbarui);
-    }
-
-    public void deleteUlasan(Long id) {
-        ulasanRepository.delete(id);
-    }
+public interface UlasanService {
+    CompletableFuture<Ulasan> createUlasan(Ulasan ulasan);
+    CompletableFuture<List<Ulasan>> findAllUlasan();
+    CompletableFuture<List<Ulasan>> findUlasanByUserId(String userId);
+    CompletableFuture<List<Ulasan>> findUlasanByGameId(String gameId);
+    CompletableFuture<Optional<Ulasan>> findUlasanById(String ulasanId);
+    CompletableFuture<Ulasan> updateUlasan(Ulasan ulasan);
+    void deleteUlasan(String ulasanId);
 }
