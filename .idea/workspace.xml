@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dddd0ff4-c50d-4720-a279-911e824c955d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/controller/GameTerbeliController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/controller/GameTerbeliController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/controller/UlasanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/controller/UlasanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/GameTerbeli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/GameTerbeli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/GameTerbeliId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/GameTerbeliId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/KomenUlasan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/KomenUlasan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/Ulasan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/model/Ulasan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/repository/GameTerbeliRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/repository/GameTerbeliRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/repository/UlasanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/repository/UlasanRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/service/GameTerbeliService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/service/GameTerbeliService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/service/GameTerbeliServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/service/GameTerbeliServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/service/UlasanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/c9/ratingdanulasan/service/UlasanServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +22,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ratingdanulasan" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -48,19 +32,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dockerfile" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -77,42 +54,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Gradle.Build gametime-ratingdanulasan.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.RatingdanulasanApplication.executor": "Run",
     "git-widget-placeholder": "development",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Universitas Indonesia/Tugas/SMT10/AdPro/TK/gametime-ratingdanulasan/src/main/resources/static",
+    "last_opened_file_path": "E:/Universitas Indonesia/Tugas/SMT10/AdPro/TK/gametime-ratingdanulasan",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3954023",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Universitas Indonesia\Tugas\SMT10\AdPro\TK\gametime-ratingdanulasan\src\main\resources\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Universitas Indonesia\Tugas\SMT10\AdPro\TK\gametime-ratingdanulasan\src\main\resources\static" />
-      <recent name="E:\Universitas Indonesia\Tugas\SMT10\AdPro\TK\gametime-ratingdanulasan\src\main\resources\static\css" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.c9.ratingdanulasan.controller" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="RatingdanulasanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -140,25 +94,11 @@
       <option name="presentableId" value="Default" />
       <updated>1716383163124</updated>
       <workItem from="1716383164157" duration="2118000" />
-      <workItem from="1716544159474" duration="8292000" />
-      <workItem from="1716718659484" duration="4315000" />
-      <workItem from="1716730874665" duration="164000" />
-      <workItem from="1716731050231" duration="6824000" />
+      <workItem from="1716493458106" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../ratingdanulasan/src/main/java/c9/gametime/ratingdanulasan/controller/UlasanController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
