@@ -4,32 +4,32 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class GameTerbeliId implements Serializable {
-    private String idGame;
-    private String idUser;
+    private String gameId;
+    private String userId;
 
     // Konstruktor default
     public GameTerbeliId() {}
 
-    public GameTerbeliId(String idGame, String idUser) {
-        this.idGame = idGame;
-        this.idUser = idUser;
+    public GameTerbeliId(String gameId, String userId) {
+        this.gameId = gameId;
+        this.userId = userId;
     }
 
     // Metode getter, setter, equals, dan hashCode
-    public String getIdGame() {
-        return idGame;
+    public String getgameId() {
+        return gameId;
     }
 
-    public void setIdGame(String idGame) {
-        this.idGame = idGame;
+    public void setgameId(String gameId) {
+        this.gameId = gameId;
     }
 
-    public String getIdUser() {
-        return idUser;
+    public String getuserId() {
+        return userId;
     }
 
-    public void setIdUser(String idUser) {
-        this.idUser = idUser;
+    public void setuserId(String userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -37,11 +37,11 @@ public class GameTerbeliId implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GameTerbeliId that = (GameTerbeliId) o;
-        return Objects.equals(idGame, that.idGame) && Objects.equals(idUser, that.idUser);
+        return Objects.equals(gameId, that.gameId) && Objects.equals(userId, that.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idGame, idUser);
+        return Objects.hash(gameId, userId);
     }
 }

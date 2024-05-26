@@ -19,18 +19,18 @@ public class GameTerbeliServiceImpl implements GameTerbeliService {
         return gameTerbeliRepository.save(gameTerbeli);
     }
 
-    public List<GameTerbeli> getGameTerbeliByUserId(String idPengguna){
-        return gameTerbeliRepository.findAllByIdPengguna(idPengguna);
+    public List<GameTerbeli> getGameTerbeliByUserId(String userId){
+        return gameTerbeliRepository.findAllByUserId(userId);
     }
 
-    public GameTerbeli gameTerbeliReview(String idPermainan, String idPengguna){
-        GameTerbeli findGameTerbeli = gameTerbeliRepository.findByGameIdAndUserId(idPermainan, idPengguna);
+    public GameTerbeli gameTerbeliReview(String gameId, String userId){
+        GameTerbeli findGameTerbeli = gameTerbeliRepository.findByGameIdAndUserId(gameId, userId);
         findGameTerbeli.setReview(true);
         return gameTerbeliRepository.save(findGameTerbeli);
     }
 
-    public GameTerbeli gameTerbeliNoReview(String idPermainan, String idPengguna){
-        GameTerbeli findGameTerbeli = gameTerbeliRepository.findByGameIdAndUserId(idPermainan, idPengguna);
+    public GameTerbeli gameTerbeliNoReview(String gameId, String userId){
+        GameTerbeli findGameTerbeli = gameTerbeliRepository.findByGameIdAndUserId(gameId, userId);
         findGameTerbeli.setReview(false);
         return gameTerbeliRepository.save(findGameTerbeli);
     }

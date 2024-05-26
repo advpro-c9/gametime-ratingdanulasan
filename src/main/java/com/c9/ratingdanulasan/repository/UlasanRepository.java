@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface UlasanRepository extends JpaRepository<Ulasan, String> {
-    List<Ulasan> findAllByIdPengguna(String idPengguna);
+    List<Ulasan> findAllByUserId(String userId);
     List<Ulasan> findAllByPermainan(String permainan);
 }

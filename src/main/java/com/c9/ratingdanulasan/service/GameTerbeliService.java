@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface GameTerbeliService {
     public GameTerbeli inputGameTerbeli(GameTerbeli gameTerbeli);
-    public List<GameTerbeli> getGameTerbeliByUserId(String idPengguna);
-    public GameTerbeli gameTerbeliReview(String idPermainan, String idPengguna);
-    public GameTerbeli gameTerbeliNoReview(String idPermainan, String idPengguna);
+    public List<GameTerbeli> getGameTerbeliByUserId(String userId);
+    public GameTerbeli gameTerbeliReview(String gameId, String userId);
+    public GameTerbeli gameTerbeliNoReview(String gameId, String userId);
 }

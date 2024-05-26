@@ -36,7 +36,7 @@ public class UlasanServiceImpl implements UlasanService {
     @Async("taskExecutor")
     @Override
     public CompletableFuture<List<Ulasan>> findUlasanByUserId(String userId) {
-        return CompletableFuture.completedFuture(ulasanRepository.findAllByIdPengguna(userId));
+        return CompletableFuture.completedFuture(ulasanRepository.findAllByUserId(userId));
     }
 
     @Async("taskExecutor")

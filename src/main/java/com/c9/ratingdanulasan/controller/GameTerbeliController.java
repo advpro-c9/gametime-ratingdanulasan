@@ -20,28 +20,28 @@ public class GameTerbeliController {
 
     public GameTerbeli inputGameTerbeli(@RequestBody Map<String, Object> data) {
         GameTerbeli gameTerbeli = new GameTerbeli(
-                data.get("idPermainan").toString(),
-                data.get("idPengguna").toString()
+                data.get("gameId").toString(),
+                data.get("userId").toString()
         );
         return service.inputGameTerbeli(gameTerbeli);
     }
 
-    @GetMapping("/pengguna/{idPengguna}")
-    public ResponseEntity<List<GameTerbeli>> getGameTerbeliPengguna(@PathVariable String idPengguna){
-        List<GameTerbeli> gameTerbeliList = service.getGameTerbeliByUserId(idPengguna);
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<GameTerbeli>> getGameTerbeliUser(@PathVariable String userId){
+        List<GameTerbeli> gameTerbeliList = service.getGameTerbeliByUserId(userId);
         return ResponseEntity.ok(gameTerbeliList);
     }
 
-    @PatchMapping("/sudah-ditinjau/pengguna/{idPengguna}")
-    public GameTerbeli gameTerbeliDitinjau(@PathVariable String idPengguna, @RequestBody Map<String, Object> data) {
-        GameTerbeli gameTerbeliDitinjau = service.gameTerbeliReview(data.get("idPermainan").toString(), idPengguna);
-        return gameTerbeliDitinjau;
+    @PatchMapping("/sudah-dikomen/user/{userId}")
+    public GameTerbeli gameTerbeliDikomen(@PathVariable String userId, @RequestBody Map<String, Object> data) {
+        GameTerbeli gameTerbeliDikomen = service.gameTerbeliReview(data.get("gameId").toString(), userId);
+        return gameTerbeliDikomen;
     }
 
-    @PatchMapping("/belum-ditinjau/pengguna/{idPengguna}")
-    public GameTerbeli gameTerbeliBelumDitinjau(@PathVariable String idPengguna, @RequestBody Map<String, Object> data) {
-        GameTerbeli gameTerbeliBelumDitinjau = service.gameTerbeliNoReview(data.get("idPermainan").toString(), idPengguna);
-        return gameTerbeliBelumDitinjau;
+    @PatchMapping("/belum-dikomen/user/{userId}")
+    public GameTerbeli gameTerbeliBelumDikomen(@PathVariable String userId, @RequestBody Map<String, Object> data) {
+        GameTerbeli gameTerbeliBelumDikomen = service.gameTerbeliNoReview(data.get("gameId").toString(), userId);
+        return gameTerbeliBelumDikomen;
     }
 
     @PostMapping("/input")

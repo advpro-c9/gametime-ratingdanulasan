@@ -43,8 +43,8 @@ public class KomenUlasan {
     public static class Builder {
         private String id;
         private String penjualId;
-        private Ulasan ulasan;
         private String komen;
+        private Ulasan ulasan;
         private LocalDate date;
 
         public Builder id(String id) {
@@ -57,20 +57,19 @@ public class KomenUlasan {
             return this;
         }
 
-        public Builder ulasan(Ulasan ulasan) {
-            if (ulasan != null) {
-                this.ulasan = ulasan;
-            } else {
-                throw new IllegalArgumentException("Ulasan tidak boleh kosong");
-            }
-            return this;
-        }
-
         public Builder komen(String komen) {
             if (komen != null && !komen.isEmpty()) {
                 this.komen = komen;
             } else {
                 throw new IllegalArgumentException("Komentar tidak boleh kosong");
+            }
+            return this;
+        }
+        public Builder ulasan(Ulasan ulasan) {
+            if (ulasan != null) {
+                this.ulasan = ulasan;
+            } else {
+                throw new IllegalArgumentException("Ulasan tidak boleh kosong");
             }
             return this;
         }

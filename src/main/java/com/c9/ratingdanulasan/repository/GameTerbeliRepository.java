@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface GameTerbeliRepository extends JpaRepository<GameTerbeli, GameTerbeliId> {
-    List<GameTerbeli> findAllByIdPengguna(String idPengguna);
-    GameTerbeli findByGameIdAndUserId(String idPermainan, String idPengguna);
+    List<GameTerbeli> findAllByUserId(String userId);
+    GameTerbeli findByGameIdAndUserId(String gameId, String userId);
 }

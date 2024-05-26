@@ -27,7 +27,7 @@ public class UlasanController {
     public CompletableFuture<ResponseEntity<Ulasan>> addUlasan(@RequestBody Map<String, Object> data) {
         Ulasan ulasan = new Ulasan();
         ulasan.setId(UUID.randomUUID().toString());
-        ulasan.setUserId(Long.parseLong(data.get("idUser").toString()));
+        ulasan.setUserId(Long.parseLong(data.get("userId").toString()));
         ulasan.setGameId(Long.parseLong(data.get("gameId").toString()));
         ulasan.setRating(Integer.parseInt(data.get("rating").toString()));
         ulasan.setComment(data.get("deskripsi").toString());

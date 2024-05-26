@@ -49,8 +49,8 @@ public class Ulasan {
 
     public static class Builder {
         private String id;
-        private Long userId;
         private Long gameId;
+        private Long userId;
         private Integer rating;
         private String comment;
         private LocalDate date;
@@ -60,13 +60,13 @@ public class Ulasan {
             return this;
         }
 
-        public Builder userId(Long userId) {
-            this.userId = userId;
+        public Builder gameId(Long gameId) {
+            this.gameId = gameId;
             return this;
         }
 
-        public Builder gameId(Long gameId) {
-            this.gameId = gameId;
+        public Builder userId(Long userId) {
+            this.userId = userId;
             return this;
         }
 

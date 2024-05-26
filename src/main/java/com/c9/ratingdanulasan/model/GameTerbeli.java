@@ -13,18 +13,18 @@ public class GameTerbeli {
 
     @Id
     @Column(name = "game_id")
-    private String idGame;
+    private String gameId;
 
     @Id
     @Column(name = "user_id")
-    private String idUser;
+    private String userId;
 
     @Column(name = "is_reviewed")
     private boolean review;
 
-    public GameTerbeli(String idGame, String idUser) {
-        this.idGame = idGame;
-        this.idUser = idUser;
+    public GameTerbeli(String gameId, String userId) {
+        this.gameId = gameId;
+        this.userId = userId;
         this.review = false;
     }
 
