@@ -1,41 +1,13 @@
 package com.c9.ratingdanulasan.repository;
 
 import com.c9.ratingdanulasan.model.Ulasan;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import java.util.*;
+
+import java.util.List;
 
 @Repository
-public class UlasanRepository {
-    private List<Ulasan> ulasanData = new ArrayList<>();
-
-    public Ulasan save(Ulasan ulasan) {
-        ulasanData.add(ulasan);
-        return ulasan;
-    }
-
-    public List<Ulasan> findAll() {
-        return new ArrayList<>(ulasanData);
-    }
-
-    public Optional<Ulasan> findById(Long id) {
-        return ulasanData.stream().filter(ulasan -> ulasan.getId().equals(id)).findFirst();
-    }
-
-    public Ulasan update(Long id, Ulasan ulasanYangDiperbarui) {
-        for (int i = 0; i < ulasanData.size(); i++) {
-            Ulasan ulasan = ulasanData.get(i);
-            if (ulasan.getId().equals(id)) {
-                ulasan.setGameId(ulasanYangDiperbarui.getGameId());
-                ulasan.setUserId(ulasanYangDiperbarui.getUserId());
-                ulasan.setComment(ulasanYangDiperbarui.getComment());
-                ulasan.setRating(ulasanYangDiperbarui.getRating());
-                return ulasan;
-            }
-        }
-        return null;
-    }
-
-    public void delete(Long id) {
-        ulasanData.removeIf(ulasan -> ulasan.getId().equals(id));
-    }
+public interface UlasanRepository extends JpaRepository<Ulasan, String> {
+    List<Ulasan> findAllByUserId(String userId);
+    List<Ulasan> findAllByPermainan(String permainan);
 }
