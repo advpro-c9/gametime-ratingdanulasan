@@ -43,14 +43,14 @@ public class UlasanController {
     }
 
     @GetMapping("/user/{userId}")
-    public CompletableFuture<ResponseEntity<List<Ulasan>>> findUlasanByUserId(@PathVariable Long userId) {
-        return ulasanService.findUlasansByUserId(userId)
+    public CompletableFuture<ResponseEntity<List<Ulasan>>> findUlasanByUserId(@PathVariable String userId) {
+        return ulasanService.findUlasanByUserId(userId)
                 .thenApply(ulasans -> ulasans.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(ulasans));
     }
 
     @GetMapping("/game/{gameId}")
-    public CompletableFuture<ResponseEntity<List<Ulasan>>> findUlasanByGameId(@PathVariable Long gameId) {
-        return ulasanService.findUlasansByGameId(gameId)
+    public CompletableFuture<ResponseEntity<List<Ulasan>>> findUlasanByGameId(@PathVariable String gameId) {
+        return ulasanService.findUlasanByGameId(gameId)
                 .thenApply(ulasans -> ulasans.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(ulasans));
     }
 

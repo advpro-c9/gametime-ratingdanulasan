@@ -32,7 +32,7 @@ public class Ulasan {
 
     @OneToOne(mappedBy = "ulasan", cascade = CascadeType.REMOVE)
     @JsonBackReference
-    private TanggapanUlasan tanggapanUlasan;
+    private KomenUlasan komenUlasan;
 
     public Ulasan() {
         // Default constructor
