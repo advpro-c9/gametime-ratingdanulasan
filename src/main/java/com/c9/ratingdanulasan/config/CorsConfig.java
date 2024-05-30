@@ -1,4 +1,4 @@
-package jagongadpro.gametime_ratingulasan.config;
+package com.c9.ratingdanulasan.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
